@@ -2,9 +2,10 @@
 
 require_once "DatabaseBackup.php";
 require_once "Message.php";
+require_once "DatabaseOption.php";
 
 $backup = new DatabaseBackup("localhost", "root", "");
-$message = $backup->generate("demo", "backup.sql", "all");
+$message = $backup->generate("demo", "backup.sql", DatabaseOption::$TODO);
 
 ?>
 <!DOCTYPE html>
